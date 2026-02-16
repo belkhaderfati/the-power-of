@@ -549,30 +549,53 @@ button {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: var(--spacing-xl);
+    align-items: stretch;
 }
 
+/* Make cards equal-height and stack content vertically */
 .project-card {
     background: var(--white);
     border-radius: 12px;
     overflow: hidden;
     transition: var(--transition);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
 }
 
 .project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(236, 72, 153, 0.2);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(236, 72, 153, 0.18);
 }
 
+/* Image containers (support background-image and <img> variants) */
 .project-image {
     width: 100%;
-    height: 200px;
+    aspect-ratio: 16/9;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 140px;
 }
 
+/* Handle img tags placed directly inside cards */
+.project-card img {
+    width: 100%;
+    height: auto;
+    max-height: 280px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Ensure the card content fills remaining space */
 .project-content {
     padding: var(--spacing-xl);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    flex: 1 1 auto;
 }
 
 .project-content h3 {
@@ -585,13 +608,49 @@ button {
     color: var(--light-text);
     margin-bottom: var(--spacing-md);
     font-size: var(--font-size-base);
-    line-height: 1.8;
+    line-height: 1.7;
+    flex: 1 1 auto;
 }
 
+/* tags stay at the bottom of content when possible */
 .project-tags {
     display: flex;
     gap: var(--spacing-sm);
     flex-wrap: wrap;
+    margin-top: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+    .project-image,
+    .project-card img {
+        min-height: 140px;
+        max-height: 220px;
+    }
+}
+
+@media (max-width: 640px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    .project-image,
+    .project-card img {
+        min-height: 160px;
+        max-height: 260px;
+    }
+    .project-content h3 {
+        font-size: 1.05rem;
+    }
+    .project-content p {
+        font-size: 0.95rem;
+    }
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
 }
 
 .project-gallery {
@@ -620,6 +679,111 @@ button {
     border-radius: 20px;
     font-size: 12px;
     font-weight: 600;
+}
+
+/* ================================
+   DOCUMENTS / PDF PREVIEW
+   ================================ */
+.documents {
+    padding: var(--spacing-2xl) 0;
+    background: var(--white);
+}
+
+.documents-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+    align-items: start;
+}
+
+.document-card {
+    display: flex;
+    gap: var(--spacing-md);
+    align-items: center;
+    background: var(--light-bg);
+    padding: var(--spacing-md);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+
+.doc-thumbnail {
+    font-size: 42px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(236,72,153,0.08), rgba(167,139,250,0.06));
+    border-radius: 8px;
+}
+
+.doc-info h3 {
+    margin: 0 0 6px 0;
+    font-size: var(--font-size-lg);
+}
+
+.doc-info p {
+    margin: 0 0 10px 0;
+    color: var(--light-text);
+}
+
+.doc-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.preview-btn {
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 6px 10px;
+    border-radius: 8px;
+}
+
+.preview-btn:hover {
+    background: rgba(236,72,153,0.06);
+}
+
+/* PDF modal */
+.pdf-modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.6);
+    z-index: 1200;
+    padding: 20px;
+}
+
+.pdf-modal.open { display: flex; }
+
+.pdf-modal-content {
+    width: 100%;
+    max-width: 1000px;
+    height: 80vh;
+    background: var(--white);
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(2,6,23,0.3);
+}
+
+.pdf-modal-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+#pdfViewer {
+    width: 100%;
+    height: 100%;
+    border: none;
 }
 
 /* ================================
