@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fatima Zahra Belkhader - CV</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #2c3e50;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .cv-container {
+            max-width: 8.5in;
+            height: 11in;
+            background: white;
+            margin: 0 auto;
+            padding: 40px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            line-height: 1.5;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #ec4899;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+
+        .name {
+            font-size: 28px;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 5px;
+        }
+
+        .title {
+            font-size: 14px;
+            color: #ec4899;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .contact-info {
+            font-size: 12px;
+            color: #6b7280;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .contact-info span {
+            display: inline-block;
+        }
+
+        /* Section Styles */
+        .section {
+            margin-bottom: 18px;
+        }
+
+        .section-title {
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #1f2937;
+            border-bottom: 1px solid #ec4899;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+            letter-spacing: 0.5px;
+        }
+
+        /* Profile Summary */
+        .profile-text {
+            font-size: 12px;
+            color: #4b5563;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        /* Education Section */
+        .education-item {
+            margin-bottom: 10px;
+        }
+
+        .degree {
+            font-size: 12px;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 3px;
+        }
+
+        .institution {
+            font-size: 11px;
+            color: #6b7280;
+            font-style: italic;
+        }
+
+        .subjects {
+            font-size: 11px;
+            color: #4b5563;
+            margin-top: 3px;
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 5px;
+        }
+
+        .skill-item {
+            font-size: 11px;
+            color: #4b5563;
+            padding: 6px;
+            background-color: #f9f7ff;
+            border-left: 3px solid #ec4899;
+            border-radius: 3px;
+        }
+
+        /* Experience / Projects */
+        .exp-item {
+            margin-bottom: 10px;
+        }
+
+        .exp-title {
+            font-size: 12px;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 2px;
+        }
+
+        .exp-description {
+            font-size: 11px;
+            color: #4b5563;
+            margin-top: 2px;
+        }
+
+        /* Internships/Timeline */
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            font-size: 12px;
+            color: #4b5563;
+            padding: 8px 10px;
+            background-color: #f9f7ff;
+            border-left: 4px solid #ec4899;
+            border-radius: 3px;
+        }
+
+        .timeline-date {
+            font-weight: 600;
+            color: #ec4899;
+            min-width: 120px;
+        }
+
+        /* Languages */
+        .languages-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .language-item {
+            font-size: 11px;
+            color: #4b5563;
+            padding: 5px 0;
+        }
+
+        .language-label {
+            font-weight: 600;
+            color: #1f2937;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                padding: 0;
+                background: white;
+            }
+
+            .cv-container {
+                max-width: 100%;
+                height: auto;
+                padding: 0;
+                box-shadow: none;
+                margin: 0;
+            }
+        }
+
+        /* Screen Styles */
+        @media screen {
+            .cv-container {
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cv-container">
+        <!-- Header -->
+        <div class="header">
+            <div class="name">FATIMA ZAHRA BELKHADER</div>
+            <div class="title">Junior Digital Marketing Specialist</div>
+            <div class="contact-info">
+                <span>📧 belkhaderfati@gmail.com</span>
+                <span>📍 Morocco</span>
+            </div>
+        </div>
+
+        <!-- Professional Profile -->
+        <div class="section">
+            <div class="section-title">Professional Profile</div>
+            <div class="profile-text">
+                Motivated junior digital marketer with academic training in digital marketing strategies and brand development. Specialized in personal branding, social media marketing, and AI-powered content creation. Passionate about building strong brand identities, developing marketing strategies, and leveraging modern tools to enhance online presence. Seeking to apply theoretical knowledge and practical skills in a dynamic marketing environment.
+            </div>
+        </div>
+
+        <!-- Education -->
+        <div class="section">
+            <div class="section-title">Education</div>
+            <div class="education-item">
+                <div class="degree">Diploma in Digital Marketing</div>
+                <div class="subjects">
+                    <strong>Main Subjects:</strong> Branding | Personal Branding | Digital Marketing Basics | Social Media Marketing | Content Creation | Marketing Strategy | Prompt Engineering (AI Tools)
+                </div>
+            </div>
+        </div>
+
+        <!-- Skills -->
+        <div class="section">
+            <div class="section-title">Core Competencies</div>
+            <div class="skills-grid">
+                <div class="skill-item">• Digital Marketing Strategy</div>
+                <div class="skill-item">• Brand Development</div>
+                <div class="skill-item">• Social Media Marketing</div>
+                <div class="skill-item">• Content Creation</div>
+                <div class="skill-item">• Personal Branding</div>
+                <div class="skill-item">• Prompt Engineering</div>
+                <div class="skill-item">• AI Tools Proficiency</div>
+                <div class="skill-item">• Basic Design Knowledge</div>
+            </div>
+        </div>
+
+        <!-- Projects & Experience -->
+        <div class="section">
+            <div class="section-title">Projects & Experience</div>
+            <div class="exp-item">
+                <div class="exp-title">Personal Branding Projects</div>
+                <div class="exp-description">Developed comprehensive personal branding strategies including brand positioning, visual identity guidelines, and marketing messaging frameworks.</div>
+            </div>
+            <div class="exp-item">
+                <div class="exp-title">Social Media Marketing Practice</div>
+                <div class="exp-description">Created and executed social media content strategies, designed engaging content calendars, and practiced audience engagement techniques across multiple platforms.</div>
+            </div>
+            <div class="exp-item">
+                <div class="exp-title">Digital Marketing Training Projects</div>
+                <div class="exp-description">Completed practical training projects covering digital marketing fundamentals, brand strategy, content marketing, and AI-powered productivity tools.</div>
+            </div>
+        </div>
+
+        <!-- Professional Timeline -->
+        <div class="section">
+            <div class="section-title">Professional Timeline</div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="timeline-date">Novembre 2019</span>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-date">Janvier 2020</span>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-date">Mars 2020</span>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-date">Janvier 2023</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Languages -->
+        <div class="section">
+            <div class="section-title">Languages</div>
+            <div class="languages-list">
+                <div class="language-item"><span class="language-label">Arabic</span> - Native</div>
+                <div class="language-item"><span class="language-label">French</span> - Fluent</div>
+                <div class="language-item"><span class="language-label">English</span> - Basic</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
